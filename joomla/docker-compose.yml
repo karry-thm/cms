@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=root 
+      - MYSQL_DATABASE=joomla 
+      - MYSQL_USER=joomla
+      - MYSQL_PASSWORD=joomla
+  joomla:
+    image: joomla
+    ports:
+      - 8080:80
+    environment:
+      JOOMLA_DB_HOST: mysql
+      JOOMLA_DB_USER: joomla
+      JOOMLA_DB_PASSWORD: joomla
+      JOOMLA_DB_NAME: joomla
+    depends_on: 
+      - mysql
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment: 
+      - PMA_HOST=mysql
+    ports:
+      - 8081:80
