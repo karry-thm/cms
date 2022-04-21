@@ -8,7 +8,10 @@ Drupal ist danach auf dem Port 8080 und PHPMyAdmin auf dem Port 8081 erreichbar.
 
 Name der Variable | Wert
 ---|---
-Datenbank-Name | drupal
-Benutzername | drupal
-Passwort | drupal
-Datenbank-Host | mysql
+Datenbankname | drupal
+Datenbankbenutzer | drupal
+Datenbankpasswort | drupal
+Host | mysql
+Portnummer | 3306
+
+![Screenshot der Installation](config.png)
