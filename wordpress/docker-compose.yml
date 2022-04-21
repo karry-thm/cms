@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root 
+      - MYSQL_DATABASE=wordpress 
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - 8080:80
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment: 
+      - PMA_HOST=mysql
+    ports:
+      - 8081:80
