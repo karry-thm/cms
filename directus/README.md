@@ -2,7 +2,7 @@
 
 Startet [Directus](https://duckduckgo.com).
 
-Befehl zu starten: ```docker-compose up```
+Befehl zu starten: ```docker-compose up``` (muss in diesem Ordner ausgeführt werden)
 
 Directus ist danach auf dem Port 8055 erreichbar.
 

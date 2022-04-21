@@ -4,7 +4,7 @@ Startet [Wordpress](https://wordpress.org), zusammen mit einer MySQL Datendank u
 
 [Entwickler Dokumentation](https://codex.wordpress.org/)
 
-Befehl zu starten: ```docker-compose up```
+Befehl zu starten: ```docker-compose up``` (muss in diesem Ordner ausgeführt werden)
 
 Wordpress ist danach auf dem Port 8080 und PHPMyAdmin auf dem Port 8081 erreichbar.
 
