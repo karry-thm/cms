@@ -18,3 +18,9 @@ services:
       CARS_COLLECTION_NAME: cars
     depends_on:
       - directus
+  nodered:
+    image: nodered/node-red
+    ports:
+      - 1880:1880
+    depends_on:
+      - directus

@@ -35,3 +35,7 @@ __2. Berechtigungen für collection__
 Setzen sie für die erstellte cars-Collection die Berechtigung für Public auf lesen
 
 ![Berechtigungen](permissions.PNG)
+
+## Node-Red für Webhhooks
+
+Um mit Webhooks zu experimentieren wird ein Node-Red eingerichtet. Dieses hat den Hostnamen: ```nodered```.
