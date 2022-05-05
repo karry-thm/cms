@@ -9,3 +9,12 @@ services:
       SECRET: 6116487b-cda1-52c2-b5b5-c8022c45e263
       ADMIN_EMAIL: "admin@admin.com"
       ADMIN_PASSWORD: "admin"
+  frontend:
+    build: static-client
+    ports:
+      - 3000:3000
+    environment:
+      DIRECTUS_CONNECTION_STRING: http://directus:8055
+      CARS_COLLECTION_NAME: cars
+    depends_on:
+      - directus
