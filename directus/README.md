@@ -4,7 +4,7 @@ Startet [Directus](https://duckduckgo.com).
 
 Befehl zu starten: ```docker-compose up``` (muss in diesem Ordner ausgeführt werden)
 
-Directus ist danach auf dem Port 8055 erreichbar.
+Directus ist danach auf dem Port ```8055``` erreichbar.
 
 Name der Variable | Wert
 ---|---
@@ -15,7 +15,7 @@ ADMIN_PASSWORD | admin
 
 ## Frontend
 
-Das Frontend läuft auf Port 3000. Es funktioniert aber nur, wenn folgende Punkte abgearbeitet wurden.
+Das Frontend läuft auf Port ```3000```. Es funktioniert aber nur, wenn folgende Punkte abgearbeitet wurden.
 
 __1. cars Collection erstellen__
 
@@ -38,4 +38,4 @@ Setzen sie für die erstellte cars-Collection die Berechtigung für Public auf l
 
 ## Node-Red für Webhhooks
 
-Um mit Webhooks zu experimentieren wird ein Node-Red eingerichtet. Dieses hat den Hostnamen: ```nodered```.
+Um mit Webhooks zu experimentieren wird ein Node-Red eingerichtet. Dieses hat den Hostnamen ```nodered``` und läuft auf Port ```1880```. Von Directus aus startet eine Webhook-Referenz mit ```http://nodered:1880```. Die Adresse muss um den eingerichteten Pfad ergänzt werden.
