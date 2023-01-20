@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  mysql:
+    image: mariadb:latest
+    environment:
+      - MARIADB_ROOT_PASSWORD=root 
+      - MARIADB_DATABASE=drupal
+      - MARIADB_USER=drupal
+      - MARIADB_PASSWORD=drupal
+  drupal:
+    image: drupal:latest
+    ports:
+      - 8080:80
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment: 
+      - PMA_HOST=mysql
+    ports:
+      - 8081:80
