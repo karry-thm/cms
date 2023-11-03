@@ -13,28 +13,6 @@ SECRET | 6116487b-cda1-52c2-b5b5-c8022c45e263
 ADMIN_EMAIL | admin@admin.com
 ADMIN_PASSWORD | admin
 
-## Frontend
-
-Das Frontend läuft auf Port ```3000```. Es funktioniert aber nur, wenn folgende Punkte abgearbeitet wurden.
-
-__1. cars Collection erstellen__
-
-Erstellen sie eine Collection die ```cars``` heißt. Sie muss mindestens folgende Felder aufweisen:
-
-Feldname | Type | Bemerkung
----|---|---
-id | integer | Wird automatisch erzeugt, einfach Standardeinstellung belassen
-brand | string |
-name | string |
-registration_date | integer
-
-![Collection](collection.PNG)
-
-__2. Berechtigungen für collection__
-
-Setzen sie für die erstellte cars-Collection die Berechtigung für Public auf lesen
-
-![Berechtigungen](permissions.PNG)
 
 ## Node-Red für Webhhooks
 
