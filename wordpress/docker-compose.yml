@@ -1,19 +1,19 @@
-version: "3.8"
 services:
-  mysql:
-    image: mysql:5.7
-    environment:
-      - MYSQL_ROOT_PASSWORD=root 
-      - MYSQL_DATABASE=wordpress 
-      - MYSQL_USER=wordpress
-      - MYSQL_PASSWORD=wordpress
   wordpress:
     image: wordpress:latest
+    restart: always
     ports:
       - 8080:80
-  phpmyadmin:
-    image: phpmyadmin:latest
-    environment: 
-      - PMA_HOST=mysql
-    ports:
-      - 8081:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
