@@ -5,13 +5,11 @@ services:
     ports:
       - 8080:80
     environment:
-      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_HOST: mariadb
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
-    links:
-      - "maria:db"
-  maria:
+  mariadb:
     image: mariadb
     restart: always
     environment:
