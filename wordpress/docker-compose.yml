@@ -4,16 +4,25 @@ services:
     restart: always
     ports:
       - 8080:80
+    depends_on:
+      - db
     environment:
-      WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
-  mariadb:
+  db:
     image: mariadb
     restart: always
     environment:
-      MARIADB_ROOT_PASSWORD: example
+      MARIADB_ROOT_PASSWORD: root
       MARIADB_USER: wordpress
       MARIADB_PASSWORD: wordpress
       MARIADB_DATABASE: wordpress
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+    depends_on:
+      - db
