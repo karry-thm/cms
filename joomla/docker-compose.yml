@@ -17,9 +17,3 @@ services:
       JOOMLA_DB_NAME: joomla
     depends_on: 
       - mysql
-  phpmyadmin:
-    image: phpmyadmin:latest
-    environment: 
-      - PMA_HOST=mysql
-    ports:
-      - 8081:80
